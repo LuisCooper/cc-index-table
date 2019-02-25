@@ -191,26 +191,6 @@
       }
     },
     {
-      "name": "content_charset",
-      "type": "string",
-      "nullable": true,
-      "metadata": {
-        "description": "Character set of an HTML page and other text-based document formats",
-        "example": "UTF-8",
-        "since": "CC-MAIN-2018-39"
-      }
-    },
-    {
-      "name": "content_languages",
-      "type": "string",
-      "nullable": true,
-      "metadata": {
-        "description": "Language(s) of a document as ISO-639-3 language code(s), multiple values are separated by a comma",
-        "example": "fra,eng",
-        "since": "CC-MAIN-2018-39"
-      }
-    },
-    {
       "name": "warc_filename",
       "type": "string",
       "nullable": false,

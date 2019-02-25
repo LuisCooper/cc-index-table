@@ -141,15 +141,6 @@ public class CCIndex2Table {
 		} else {
 			LOG.error("Filename not parseable: {}", filename);
 		}
-		String charset = null;
-		if (jsonobj.has("charset")) {
-			charset = jsonobj.get("charset").getAsString();
-		}
-		String languages = null;
-		if (jsonobj.has("languages")) {
-			// multiple values separated by a comma
-			languages = jsonobj.get("languages").getAsString();
-		}
 		// Note: the row layout must be congruent with the schema
 		if (useNestedSchema) {
 			return RowFactory.create(
@@ -187,8 +178,6 @@ public class CCIndex2Table {
 					timestamp, status,
 					// content-related
 					digest, mime, mimeDetected,
-					// content-related (since CC-MAIN-2018-34/CC-MAIN-2018-39)
-					charset, languages,
 					// WARC record location
 					filename, offset, length, segment,
 					// partition fields
